@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaiyana Aliya P Z — Product Manager · Healthcare IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid}
+html{scroll-behavior:smooth;background:#0a0f0d;line-height:1.5;font-size:16px}
+body{margin:0;font-family:'Figtree',sans-serif;background:#0a0f0d;color:#e5e7eb;-webkit-font-smoothing:antialiased}
+.font-mono{font-family:'JetBrains Mono',monospace}
+::selection{background:rgba(16,185,129,.35);color:#ecfdf5}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#0a0f0d}
+::-webkit-scrollbar-thumb{background:#1f2a24;border-radius:8px;border:2px solid #0a0f0d}
+::-webkit-scrollbar-thumb:hover{background:#10b981}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+
+/* ── NAV ── */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s;background:rgba(10,15,13,.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav{max-width:80rem;margin:0 auto;padding:0 2.5rem;height:4rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.nav-initials{width:2.25rem;height:2.25rem;border-radius:.375rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);display:flex;align-items:center;justify-content:center;color:#34d399;font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:500;letter-spacing:-.02em}
+.nav-domain{display:none;font-size:.875rem;color:#d4d4d4;font-family:'JetBrains Mono',monospace}
+.nav-domain span{color:#34d399}
+.nav-links{display:none;list-style:none;margin:0;padding:0;align-items:center;gap:1.75rem}
+.nav-links a{font-size:.875rem;color:#737373;font-family:'JetBrains Mono',monospace;transition:color .2s}
+.nav-links a:hover{color:#34d399}
+.nav-links .num{color:rgba(52,211,153,.6);margin-right:.2rem}
+.nav-btn{display:inline-flex;align-items:center;gap:.375rem;padding:.5rem 1rem;border:1px solid rgba(52,211,153,.4);border-radius:.375rem;color:#34d399;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:500;transition:all .2s}
+.nav-btn:hover{background:rgba(52,211,153,.1);color:#6ee7b7}
+@media(min-width:768px){.nav-links{display:flex}.nav-domain{display:block}.nav-btn-wrap{display:flex;align-items:center;gap:.75rem}}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:6rem 0 4rem}
+.hero-grid{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:linear-gradient(rgba(16,185,129,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,.5) 1px,transparent 1px);background-size:48px 48px}
+.hero-glow1{position:absolute;top:-8rem;left:-8rem;width:31rem;height:31rem;background:rgba(16,185,129,.1);filter:blur(120px);border-radius:50%;pointer-events:none}
+.hero-glow2{position:absolute;bottom:0;right:0;width:26rem;height:26rem;background:rgba(52,211,153,.05);filter:blur(100px);border-radius:50%;pointer-events:none}
+.hero-inner{position:relative;max-width:80rem;margin:0 auto;padding:0 2.5rem;width:100%}
+.hero-grid-layout{display:grid;gap:2.5rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.375rem .75rem;border-radius:9999px;border:1px solid rgba(52,211,153,.3);background:rgba(52,211,153,.05);color:#34d399;font-family:'JetBrains Mono',monospace;font-size:.75rem;margin-bottom:1.75rem}
+.ping-wrap{position:relative;width:.5rem;height:.5rem;display:flex}
+.ping{animation:ping 1.2s cubic-bezier(0,0,.2,1) infinite;position:absolute;inset:0;border-radius:50%;background:#34d399;opacity:.75}
+.ping-dot{position:relative;width:.5rem;height:.5rem;border-radius:50%;background:#34d399;display:inline-flex}
+@keyframes ping{75%,100%{transform:scale(2);opacity:0}}
+.hero h1{font-size:clamp(2.8rem,7vw,4.5rem);font-weight:600;letter-spacing:-.03em;color:#fafafa;line-height:1.05;margin:0 0 .75rem}
+.hero h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:600;letter-spacing:-.02em;color:#525252;line-height:1.1;margin:0 0 1.75rem}
+.hero-sub{max-width:36rem;color:#737373;font-size:1rem;line-height:1.7;margin-bottom:2.25rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.5rem}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#10b981;color:#0a0f0d;border-radius:.375rem;font-family:'JetBrains Mono',monospace;font-size:.875rem;font-weight:600;transition:all .2s}
+.btn-primary:hover{background:#34d399}
+.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;border:1px solid #404040;color:#e5e7eb;border-radius:.375rem;font-family:'JetBrains Mono',monospace;font-size:.875rem;font-weight:500;transition:all .2s}
+.btn-secondary:hover{border-color:rgba(52,211,153,.5);color:#34d399;background:#111}
+.hero-socials{display:flex;align-items:center;gap:1.25rem;color:#737373}
+.hero-socials a{transition:color .2s;color:#737373}
+.hero-socials a:hover{color:#34d399}
+.hero-socials svg{width:1.25rem;height:1.25rem}
+.hero-loc{display:flex;align-items:center;gap:.375rem;font-size:.75rem;font-family:'JetBrains Mono',monospace;margin-left:.25rem;padding-left:1rem;border-left:1px solid #262626}
+.hero-loc svg{width:.875rem;height:.875rem}
+
+/* Hero card */
+.hero-card-wrap{position:relative}
+.hero-card-glow{position:absolute;inset:-.25rem;background:linear-gradient(135deg,rgba(52,211,153,.4),rgba(52,211,153,.1));border-radius:1rem;filter:blur(4px);opacity:.6;transition:opacity .5s}
+.hero-card-wrap:hover .hero-card-glow{opacity:1}
+.hero-card{position:relative;border-radius:1rem;border:1px solid rgba(52,211,153,.2);background:#0c1310;padding:1.75rem}
+.hero-avatar{aspect-ratio:1;width:100%;border-radius:.75rem;background:linear-gradient(135deg,rgba(52,211,153,.2),rgba(52,211,153,.05));border:1px solid rgba(52,211,153,.2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:200px}
+.hero-avatar-bg{position:absolute;inset:0;opacity:.4;background:radial-gradient(circle at 30% 20%,rgba(16,185,129,.25),transparent 40%)}
+.hero-initials{font-size:6rem;font-weight:600;color:rgba(52,211,153,.9);font-family:'JetBrains Mono',monospace;letter-spacing:-.04em;line-height:1}
+.hero-tag{position:absolute;bottom:.75rem;right:1rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:rgba(52,211,153,.7)}
+.hero-roles{margin-top:1.25rem}
+.roles-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:#525252;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem}
+.roles-list{list-style:none;padding:0;margin:0}
+.roles-list li{display:flex;align-items:center;gap:.5rem;font-size:.875rem;color:#e5e7eb;padding:.2rem 0}
+.role-dot{width:.25rem;height:.25rem;border-radius:50%;background:#34d399;flex-shrink:0}
+
+/* Stats */
+.stats-bar{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:5rem}
+.stat-card{border:1px solid #262626;background:rgba(11,17,14,.6);border-radius:.75rem;padding:1.25rem;transition:border-color .2s}
+.stat-card:hover{border-color:rgba(52,211,153,.4)}
+.stat-val{font-size:2.25rem;font-weight:600;color:#34d399;letter-spacing:-.04em;font-family:'JetBrains Mono',monospace;line-height:1}
+.stat-lbl{margin-top:.25rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:#525252;font-family:'JetBrains Mono',monospace}
+@media(min-width:768px){.stats-bar{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1024px){.hero-grid-layout{grid-template-columns:1fr .55fr;gap:2.5rem}}
+
+/* ── SECTION SHARED ── */
+section{padding:6rem 0}
+.section-inner{max-width:80rem;margin:0 auto;padding:0 2.5rem}
+.section-head{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem}
+.section-head h2{font-size:clamp(1.4rem,3vw,1.875rem);font-weight:600;color:#f5f5f5;letter-spacing:-.02em;margin:0}
+.section-num{font-family:'JetBrains Mono',monospace;font-size:1.125rem;color:#34d399;margin-right:.75rem}
+.section-line{flex:1;height:1px;background:#262626}
+.alt-bg{background:#080c0a}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;gap:2.5rem}
+.about-text p{color:#737373;line-height:1.75;margin-bottom:1.25rem;font-size:.97rem}
+.about-text p strong{color:#d4d4d4;font-weight:500}
+.quick-facts{border:1px solid #262626;border-radius:.75rem;background:rgba(11,17,14,.6);padding:1.5rem}
+.qf-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:rgba(52,211,153,.8);text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.25rem}
+.qf-row{display:flex;align-items:start;justify-content:space-between;gap:1rem;padding:.75rem 0;border-bottom:1px solid #1a1a1a}
+.qf-row:last-child{border-bottom:none}
+.qf-k{font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#525252}
+.qf-v{font-size:.875rem;color:#e5e7eb;text-align:right}
+@media(min-width:768px){.about-grid{grid-template-columns:3fr 2fr}}
+
+/* ── EXPERIENCE ── */
+.exp-tabs{display:grid;gap:2rem}
+.exp-tab-list{display:flex;overflow-x:auto;border-bottom:1px solid #262626}
+.exp-tab-btn{flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:.875rem;padding:.75rem 1.25rem;cursor:pointer;border:none;background:transparent;color:#525252;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;white-space:nowrap}
+.exp-tab-btn.active{color:#34d399;border-bottom-color:#34d399;background:rgba(52,211,153,.05)}
+.exp-tab-btn:hover:not(.active){color:#6ee7b7;background:rgba(52,211,153,.03)}
+.exp-content{display:none}
+.exp-content.active{display:block}
+.exp-role-title{font-size:1.25rem;font-weight:600;color:#f5f5f5;margin-bottom:.375rem}
+.exp-role-title span{color:#34d399}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#525252;margin-bottom:1rem}
+.exp-summary{color:#d4d4d4;margin-bottom:1.25rem;line-height:1.6}
+.exp-bullets{list-style:none;padding:0;margin:0 0 1.5rem}
+.exp-bullets li{display:flex;gap:.75rem;color:#737373;font-size:.875rem;line-height:1.6;padding:.375rem 0}
+.exp-bullets li svg{flex-shrink:0;margin-top:.2rem;color:#34d399}
+.exp-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.exp-tag{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:rgba(52,211,153,.8);border:1px solid rgba(52,211,153,.2);background:rgba(52,211,153,.05);border-radius:.375rem;padding:.25rem .625rem}
+@media(min-width:768px){.exp-tabs{grid-template-columns:200px 1fr}.exp-tab-list{flex-direction:column;border-bottom:none;border-left:1px solid #262626}.exp-tab-btn{border-bottom:none;border-left:2px solid transparent;margin-bottom:0;margin-left:-1px;text-align:left}}
+
+/* ── PROJECTS ── */
+.projects-grid{display:grid;gap:1.5rem}
+.proj-card{border:1px solid #262626;background:rgba(11,17,14,.6);border-radius:.75rem;overflow:hidden;transition:border-color .3s;display:flex;flex-direction:column}
+.proj-card:hover{border-color:rgba(52,211,153,.4)}
+.proj-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid #262626;background:#080c0a}
+
+/* AI-generated SVG illustrations */
+.ai-illustration{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+
+.proj-tag-badge{position:absolute;top:.75rem;left:.75rem;font-family:'JetBrains Mono',monospace;font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(52,211,153,.9);border:1px solid rgba(52,211,153,.3);background:rgba(11,17,14,.7);backdrop-filter:blur(4px);border-radius:.25rem;padding:.2rem .5rem}
+.proj-live{position:absolute;top:.75rem;right:.75rem;display:flex;align-items:center;gap:.25rem;font-family:'JetBrains Mono',monospace;font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:#0a0f0d;background:#34d399;border-radius:.25rem;padding:.25rem .5rem;opacity:0;transition:opacity .2s}
+.proj-card:hover .proj-live{opacity:1}
+.proj-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.proj-meta{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+.proj-year{font-family:'JetBrains Mono',monospace;font-size:.625rem;color:#525252}
+.proj-domain{font-family:'JetBrains Mono',monospace;font-size:.625rem;color:#525252}
+.proj-name{font-size:1.25rem;font-weight:600;color:#f5f5f5;transition:color .2s;margin-bottom:.25rem}
+.proj-card:hover .proj-name{color:#34d399}
+.proj-tagline{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:rgba(52,211,153,.7);margin-bottom:1rem}
+.proj-desc{font-size:.875rem;color:#737373;line-height:1.65;margin-bottom:1.25rem;flex:1}
+.proj-highlights{list-style:none;padding:0;margin:0 0 1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:.375rem}
+.proj-highlights li{display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:#737373}
+.proj-highlights li span{width:.25rem;height:.25rem;border-radius:50%;background:#34d399;flex-shrink:0}
+.proj-stack{display:flex;flex-wrap:wrap;gap:.375rem;margin-bottom:1.25rem}
+.proj-tech{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#737373;background:rgba(23,23,23,.8);border:1px solid #262626;border-radius:.25rem;padding:.15rem .5rem;transition:all .2s}
+.proj-card:hover .proj-tech{border-color:#333;color:#a3a3a3}
+.proj-footer{display:flex;align-items:center;gap:.75rem;padding-top:1.25rem;border-top:1px solid #262626}
+.proj-btn-live{display:inline-flex;align-items:center;gap:.375rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;color:#0a0f0d;background:#34d399;border-radius:.375rem;padding:.5rem .75rem;transition:background .2s}
+.proj-btn-live:hover{background:#6ee7b7}
+.proj-btn-gh{display:inline-flex;align-items:center;gap:.375rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#d4d4d4;border:1px solid #262626;border-radius:.375rem;padding:.5rem .75rem;transition:all .2s}
+.proj-btn-gh:hover{border-color:rgba(52,211,153,.4);color:#34d399}
+.proj-arrow{margin-left:auto;color:#404040;transition:all .2s}
+.proj-card:hover .proj-arrow{color:#34d399;transform:translate(.15rem,-.15rem)}
+.proj-small-icon{width:2.75rem;height:2.75rem;border-radius:.5rem;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);display:flex;align-items:center;justify-content:center;color:#34d399}
+@media(min-width:768px){.projects-grid{grid-template-columns:1fr 1fr}}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;gap:1.25rem}
+.skill-group{border:1px solid #262626;border-radius:.75rem;padding:1.5rem;transition:border-color .2s}
+.skill-group:nth-child(1){background:linear-gradient(135deg,rgba(52,211,153,.15),#0b110e)}
+.skill-group:nth-child(2){background:linear-gradient(135deg,rgba(52,211,153,.15),#0b110e)}
+.skill-group:nth-child(3){background:linear-gradient(135deg,rgba(20,184,166,.15),#0b110e)}
+.skill-group:nth-child(4){background:linear-gradient(135deg,rgba(132,204,22,.1),#0b110e)}
+.skill-group:hover{border-color:rgba(52,211,153,.4)}
+.skill-group-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.skill-group-title{font-size:1.125rem;font-weight:600;color:#f5f5f5}
+.skill-count{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:rgba(52,211,153,.8)}
+.skill-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.skill-pill{font-size:.875rem;color:#d4d4d4;border:1px solid #262626;background:rgba(10,10,10,.4);border-radius:.375rem;padding:.375rem .75rem;transition:all .2s;cursor:default}
+.skill-pill:hover{border-color:rgba(52,211,153,.4);color:#34d399}
+@media(min-width:768px){.skills-grid{grid-template-columns:1fr 1fr}}
+
+/* ── EDUCATION ── */
+.edu-certs-grid{display:grid;gap:2rem}
+.edu-section-title{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;color:#d4d4d4;font-weight:500}
+.edu-section-title svg{color:#34d399}
+.edu-cards{display:flex;flex-direction:column;gap:1rem}
+.edu-card{border:1px solid #262626;border-radius:.75rem;padding:1.25rem;background:rgba(11,17,14,.6);transition:border-color .2s}
+.edu-card:hover{border-color:rgba(52,211,153,.4)}
+.edu-card-head{display:flex;align-items:start;justify-content:space-between;gap:.75rem;margin-bottom:.5rem}
+.edu-degree{font-weight:500;color:#f5f5f5;line-height:1.3}
+.edu-status{font-family:'JetBrains Mono',monospace;font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(52,211,153,.8);border:1px solid rgba(52,211,153,.3);border-radius:.25rem;padding:.2rem .5rem;flex-shrink:0}
+.edu-school{font-size:.875rem;color:#737373;margin-bottom:.375rem}
+.edu-period{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:#525252}
+.cert-cards{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.cert-card{border:1px solid #262626;border-radius:.5rem;padding:1rem;background:rgba(11,17,14,.6);transition:border-color .2s}
+.cert-card:hover{border-color:rgba(52,211,153,.4)}
+.cert-name{font-size:.875rem;font-weight:500;color:#f5f5f5;line-height:1.35;margin-bottom:.25rem}
+.cert-org{font-size:.75rem;color:#525252;margin-bottom:.5rem}
+.cert-year{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:rgba(52,211,153,.8)}
+@media(min-width:1024px){.edu-certs-grid{grid-template-columns:2fr 3fr}}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;gap:2rem}
+.contact-sub{color:#737373;line-height:1.7;margin-bottom:1.5rem}
+.contact-links{display:flex;flex-direction:column;gap:.75rem}
+.contact-link{display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:#d4d4d4;transition:color .2s}
+.contact-link:hover{color:#34d399}
+.contact-icon{width:2.25rem;height:2.25rem;border-radius:.375rem;border:1px solid rgba(52,211,153,.3);background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center;color:#34d399;flex-shrink:0}
+.contact-icon svg{width:1rem;height:1rem}
+.contact-socials{display:flex;gap:.75rem;margin-top:1.25rem}
+.social-btn{width:2.5rem;height:2.5rem;border-radius:.375rem;border:1px solid #262626;color:#737373;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.social-btn:hover{color:#34d399;border-color:rgba(52,211,153,.4)}
+.contact-form{border:1px solid #262626;border-radius:.75rem;padding:1.5rem;background:rgba(11,17,14,.6)}
+.form-row{display:grid;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.375rem}
+.form-label{font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#525252}
+.form-input{background:#0a0f0d;border:1px solid #262626;border-radius:.375rem;color:#f5f5f5;padding:.5rem .75rem;font-size:.875rem;font-family:inherit;outline:none;transition:border-color .2s;width:100%}
+.form-input:focus{border-color:rgba(52,211,153,.4)}
+.form-input::placeholder{color:#404040}
+textarea.form-input{resize:none;min-height:8rem}
+.form-submit{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;background:#10b981;color:#0a0f0d;border:none;border-radius:.375rem;font-family:'JetBrains Mono',monospace;font-size:.875rem;font-weight:600;cursor:pointer;transition:background .2s}
+.form-submit:hover{background:#34d399}
+@media(min-width:640px){.form-row{grid-template-columns:1fr 1fr}}
+@media(min-width:768px){.contact-grid{grid-template-columns:2fr 3fr}}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid #171717;padding:2.5rem;background:#080c0a}
+.footer-inner{max-width:80rem;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:1.25rem}
+.footer-copy{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#525252;text-align:center}
+.footer-copy span{color:#34d399}
+.footer-links{display:flex;align-items:center;gap:1rem}
+.footer-links a{color:#525252;transition:color .2s;display:flex;align-items:center}
+.footer-links a:hover{color:#34d399}
+.footer-links svg{width:1rem;height:1rem}
+.back-top{width:2rem;height:2rem;border-radius:.375rem;border:1px solid #262626;color:#737373;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.back-top:hover{border-color:rgba(52,211,153,.4);color:#34d399}
+@media(min-width:768px){.footer-inner{flex-direction:row}}
+
+/* SVG icon helpers */
+svg.icon{display:inline-block;vertical-align:middle}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header>
+  <nav>
+    <a href="#top" class="nav-logo">
+      <div class="nav-initials">ZA</div>
+      <span class="nav-domain font-mono">zaiyana<span>.</span>dev</span>
+    </a>
+    <ul class="nav-links font-mono">
+      <li><a href="#about"><span class="num">01.</span>About</a></li>
+      <li><a href="#experience"><span class="num">02.</span>Experience</a></li>
+      <li><a href="#projects"><span class="num">03.</span>Projects</a></li>
+      <li><a href="#skills"><span class="num">04.</span>Skills</a></li>
+      <li><a href="#education"><span class="num">05.</span>Education</a></li>
+      <li><a href="#contact"><span class="num">06.</span>Contact</a></li>
+    </ul>
+    <div class="nav-btn-wrap">
+      <a href="mailto:zaiyanazulfikar@gmail.com" class="nav-btn font-mono">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        Hire Me
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="hero-glow1"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-grid-layout">
+
+      <!-- Left -->
+      <div>
+        <div class="hero-badge font-mono">
+          <div class="ping-wrap"><span class="ping"></span><span class="ping-dot"></span></div>
+          Available for Product Coordinator / APM roles
+        </div>
+        <p class="font-mono" style="font-size:.875rem;color:#34d399;margin-bottom:1rem">Hi, my name is</p>
+        <h1>Zaiyana Aliya P Z.</h1>
+        <h2>I ship healthcare products.</h2>
+        <p class="hero-sub">Project Coordinator at Databata Health Clinic. I've shipped 21 product features across 4 app releases on Google Play &amp; App Store — including AI Food Scanner, Hydration Tracking, and Workout History. Former SAP ERP Apprentice at IndianOil. Pursuing MBA in Business Analytics.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/zaiyana-aliya-p-z-612004273" target="_blank" rel="noreferrer" aria-label="LinkedIn" onclick="window.open('https://www.linkedin.com/in/zaiyana-aliya-p-z-612004273','_blank');return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:zaiyanazulfikar@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </a>
+          <span class="hero-loc font-mono">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            Palakkad, Kerala, India
+          </span>
+        </div>
+      </div>
+
+      <!-- Right card -->
+      <div class="hero-card-wrap">
+        <div class="hero-card-glow"></div>
+        <div class="hero-card">
+          <div class="hero-avatar">
+            <div class="hero-avatar-bg"></div>
+            <div class="hero-initials">ZA</div>
+            <div class="hero-tag font-mono">product.healthcare</div>
+          </div>
+          <div class="hero-roles">
+            <p class="roles-label font-mono">ROLES I'M TARGETING</p>
+            <ul class="roles-list">
+              <li><span class="role-dot"></span>Project Coordinator</li>
+              <li><span class="role-dot"></span>Associate Product Manager</li>
+              <li><span class="role-dot"></span>Business Analyst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat-card"><div class="stat-val font-mono">21</div><div class="stat-lbl font-mono">Features Shipped</div></div>
+      <div class="stat-card"><div class="stat-val font-mono">64</div><div class="stat-lbl font-mono">Tasks Managed</div></div>
+      <div class="stat-card"><div class="stat-val font-mono">4</div><div class="stat-lbl font-mono">App Releases</div></div>
+      <div class="stat-card"><div class="stat-val font-mono">2</div><div class="stat-lbl font-mono">AI Projects Live</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2><span class="section-num font-mono">01.</span>About</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a results-driven <strong>Project Coordinator with hands-on Associate Product Manager experience</strong>, currently delivering end-to-end product features for a live healthcare mobile application at Databata Health Clinic.</p>
+        <p>My work sits at the intersection of product, healthcare, and engineering — I translate needs from patients, dietitians, and doctors into structured user stories, own the release pipeline for iOS and Android, and verify every fix before sign-off.</p>
+        <p>Beyond the day job, I'm building <strong>AI products in public</strong> — a 5-project series covering RAG, LLM integrations, and healthcare tooling. Currently pursuing an MBA in Business Analytics at Amity University.</p>
+      </div>
+      <div>
+        <div class="quick-facts">
+          <p class="qf-label font-mono">quick facts</p>
+          <div class="qf-row"><dt class="qf-k font-mono">Based in</dt><dd class="qf-v">Palakkad, Kerala</dd></div>
+          <div class="qf-row"><dt class="qf-k font-mono">Focus</dt><dd class="qf-v">Healthcare Product</dd></div>
+          <div class="qf-row"><dt class="qf-k font-mono">Stack</dt><dd class="qf-v">Python · Flask · SQL</dd></div>
+          <div class="qf-row"><dt class="qf-k font-mono">Now</dt><dd class="qf-v">MBA · Business Analytics</dd></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2><span class="section-num font-mono">02.</span>Where I've Worked</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="exp-tabs">
+      <div class="exp-tab-list">
+        <button class="exp-tab-btn active font-mono" onclick="switchTab(0)">
+          Databata
+          <span style="display:inline-block;width:.375rem;height:.375rem;border-radius:50%;background:#34d399;margin-left:.5rem;vertical-align:middle"></span>
+        </button>
+        <button class="exp-tab-btn font-mono" onclick="switchTab(1)">IndianOil</button>
+        <button class="exp-tab-btn font-mono" onclick="switchTab(2)">Quest</button>
+      </div>
+
+      <div>
+        <div class="exp-content active" id="tab-0">
+          <h3 class="exp-role-title">Project Coordinator (Product-Focused)<span> @ Databata Health Clinic</span></h3>
+          <p class="exp-period font-mono">Mar 2026 — Present · Kerala, India</p>
+          <p class="exp-summary">Own the product backlog and release roadmap for a live healthcare app on iOS and Android.</p>
+          <ul class="exp-bullets">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Managed a 64-task backlog across 4 app releases (Mar–Apr 2026) shipping to Google Play Store and Apple App Store.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Shipped 21 features including AI Food Scanner, Hydration Tracking, Sleep Tracking, Workout History with Live Timer, Fat % &amp; LBM Calculation, Diet Assignment, and Food Photo Editing.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Translated needs from 3 stakeholder groups (patients, dietitians, doctors) into user stories with clear acceptance criteria.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Prioritised features by business impact — balancing user value and development capacity across sprint cycles.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Identified, documented, and tracked 7 bugs with reproduction steps, priority classification, and post-deploy verification.</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag font-mono">Product Management</span>
+            <span class="exp-tag font-mono">Release Planning</span>
+            <span class="exp-tag font-mono">User Stories</span>
+            <span class="exp-tag font-mono">QA</span>
+            <span class="exp-tag font-mono">Mobile</span>
+          </div>
+        </div>
+
+        <div class="exp-content" id="tab-1">
+          <h3 class="exp-role-title">ERP System Apprentice (SAP)<span> @ IndianOil Corporation Ltd (IOCL)</span></h3>
+          <p class="exp-period font-mono">Mar 2025 — Mar 2026 · Ernakulam, Kerala</p>
+          <p class="exp-summary">Worked within enterprise SAP ERP workflows at one of India's largest public sector undertakings.</p>
+          <ul class="exp-bullets">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Operated across SAP modules: Purchase Order (PO), Service Entry Sheet (SES), Accounts Receivable (AR), and Accounts Payable (AP).</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Handled Exception Invoice Check (EIC) in SAP VIM — identifying invoice mismatches and routing corrections.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Managed real-time data entry, validation, and report generation across enterprise workflow modules.</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag font-mono">SAP ERP</span>
+            <span class="exp-tag font-mono">SAP VIM</span>
+            <span class="exp-tag font-mono">PO / SES</span>
+            <span class="exp-tag font-mono">AR / AP</span>
+          </div>
+        </div>
+
+        <div class="exp-content" id="tab-2">
+          <h3 class="exp-role-title">Python Full Stack Developer Trainee<span> @ Quest Innovative Solutions Pvt Ltd</span></h3>
+          <p class="exp-period font-mono">Jul 2024 — Mar 2025 · Ernakulam, Kerala</p>
+          <p class="exp-summary">Built full-stack web applications from design to deployment, strengthening technical foundations that now inform my APM work.</p>
+          <ul class="exp-bullets">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Built web applications using Python, Django, Flask, and SQL with authentication and database integration.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Designed responsive front-end interfaces using HTML5, CSS3, Bootstrap, and JavaScript.</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg><span>Developed a Student Management System and multiple mini-projects demonstrating end-to-end delivery capability.</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag font-mono">Python</span>
+            <span class="exp-tag font-mono">Django</span>
+            <span class="exp-tag font-mono">Flask</span>
+            <span class="exp-tag font-mono">SQL</span>
+            <span class="exp-tag font-mono">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2><span class="section-num font-mono">03.</span>Things I've Built</h2>
+      <div class="section-line"></div>
+    </div>
+    <p style="color:#737373;max-width:36rem;margin-bottom:2.5rem;margin-top:-1.25rem">A mix of AI products I'm building in public and engineering work from my full-stack journey. Currently on Project 2 of a 5-part AI series.</p>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 — HealthMate AI -->
+      <article class="proj-card">
+        <a href="https://lnkd.in/ggJgUTv4" target="_blank" rel="noopener noreferrer" class="proj-thumb">
+          <!-- AI Illustration: HealthMate - chatbot / medical brain -->
+          <svg class="ai-illustration" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="hm-bg" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0d2e1f"/>
+                <stop offset="100%" stop-color="#080c0a"/>
+              </radialGradient>
+              <filter id="hm-glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect width="400" height="225" fill="url(#hm-bg)"/>
+            <!-- Grid -->
+            <path d="M0 45h400M0 90h400M0 135h400M0 180h400M80 0v225M160 0v225M240 0v225M320 0v225" stroke="rgba(16,185,129,.07)" stroke-width="1"/>
+            <!-- Brain outline -->
+            <ellipse cx="200" cy="105" rx="70" ry="55" fill="none" stroke="rgba(52,211,153,.25)" stroke-width="1.5"/>
+            <path d="M175,70 Q160,60 148,75 Q135,90 145,105 Q135,120 148,132 Q160,144 178,138" fill="none" stroke="rgba(52,211,153,.3)" stroke-width="1.5"/>
+            <path d="M225,70 Q240,60 252,75 Q265,90 255,105 Q265,120 252,132 Q240,144 222,138" fill="none" stroke="rgba(52,211,153,.3)" stroke-width="1.5"/>
+            <path d="M170,100 Q200,88 230,100" fill="none" stroke="rgba(52,211,153,.35)" stroke-width="1.5"/>
+            <!-- Neural dots -->
+            <circle cx="185" cy="85" r="3" fill="#34d399" opacity=".8" filter="url(#hm-glow)"/>
+            <circle cx="215" cy="85" r="3" fill="#34d399" opacity=".8" filter="url(#hm-glow)"/>
+            <circle cx="200" cy="75" r="2.5" fill="#34d399" opacity=".7" filter="url(#hm-glow)"/>
+            <circle cx="175" cy="105" r="3" fill="#10b981" opacity=".9" filter="url(#hm-glow)"/>
+            <circle cx="225" cy="105" r="3" fill="#10b981" opacity=".9" filter="url(#hm-glow)"/>
+            <circle cx="200" cy="120" r="3" fill="#34d399" opacity=".8" filter="url(#hm-glow)"/>
+            <circle cx="190" cy="135" r="2" fill="#34d399" opacity=".6"/>
+            <circle cx="210" cy="135" r="2" fill="#34d399" opacity=".6"/>
+            <!-- Neural connections -->
+            <line x1="185" y1="85" x2="200" y2="75" stroke="rgba(52,211,153,.4)" stroke-width="1"/>
+            <line x1="215" y1="85" x2="200" y2="75" stroke="rgba(52,211,153,.4)" stroke-width="1"/>
+            <line x1="185" y1="85" x2="175" y2="105" stroke="rgba(52,211,153,.35)" stroke-width="1"/>
+            <line x1="215" y1="85" x2="225" y2="105" stroke="rgba(52,211,153,.35)" stroke-width="1"/>
+            <line x1="175" y1="105" x2="200" y2="120" stroke="rgba(52,211,153,.4)" stroke-width="1"/>
+            <line x1="225" y1="105" x2="200" y2="120" stroke="rgba(52,211,153,.4)" stroke-width="1"/>
+            <!-- Plus cross (medical) -->
+            <rect x="193" y="148" width="14" height="4" rx="2" fill="rgba(52,211,153,.6)"/>
+            <rect x="198" y="143" width="4" height="14" rx="2" fill="rgba(52,211,153,.6)"/>
+            <!-- Label -->
+            <text x="200" y="195" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(52,211,153,.5)" letter-spacing="2">HEALTHMATE AI</text>
+            <text x="200" y="210" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(52,211,153,.3)">Gemini 2.5 Flash · Healthcare Chatbot</text>
+          </svg>
+          <span class="proj-tag-badge font-mono">Project 1 of 5</span>
+          <span class="proj-live font-mono">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            Try Live
+          </span>
+        </a>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-year font-mono">2026</span><span class="proj-domain font-mono">· Healthcare · AI</span></div>
+          <h3 class="proj-name">HealthMate AI</h3>
+          <p class="proj-tagline font-mono">Healthcare chatbot with personalized diet &amp; symptom guidance.</p>
+          <p class="proj-desc">A healthcare chatbot powered by Google Gemini 2.5 Flash that gives personalized diet advice, symptom guidance with doctor reminders, supplement info, and lifestyle tips. No setup — just open and chat.</p>
+          <ul class="proj-highlights">
+            <li><span></span>Diet &amp; nutrition recommendations</li>
+            <li><span></span>Symptom guidance with doctor reminders</li>
+            <li><span></span>Supplement information lookup</li>
+            <li><span></span>Lifestyle tips engine</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="proj-tech font-mono">Gemini 2.5 Flash</span>
+            <span class="proj-tech font-mono">HTML</span>
+            <span class="proj-tech font-mono">CSS</span>
+            <span class="proj-tech font-mono">JavaScript</span>
+            <span class="proj-tech font-mono">Netlify</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://lnkd.in/ggJgUTv4" target="_blank" rel="noopener noreferrer" class="proj-btn-live font-mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              Try it live
+            </a>
+            <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noopener noreferrer" class="proj-btn-gh font-mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              Source
+            </a>
+            <span class="proj-arrow" style="margin-left:auto">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 — Food Calorie Analyzer -->
+      <article class="proj-card">
+        <a href="https://food-calorie-analyzer-fki8.onrender.com/" target="_blank" rel="noopener noreferrer" class="proj-thumb">
+          <!-- AI Illustration: RAG / food database -->
+          <svg class="ai-illustration" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="fc-bg" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0f2a1e"/>
+                <stop offset="100%" stop-color="#080c0a"/>
+              </radialGradient>
+            </defs>
+            <rect width="400" height="225" fill="url(#fc-bg)"/>
+            <path d="M0 45h400M0 90h400M0 135h400M0 180h400M80 0v225M160 0v225M240 0v225M320 0v225" stroke="rgba(16,185,129,.06)" stroke-width="1"/>
+            <!-- Database cylinders -->
+            <ellipse cx="130" cy="82" rx="35" ry="10" fill="rgba(52,211,153,.12)" stroke="rgba(52,211,153,.3)" stroke-width="1.5"/>
+            <rect x="95" y="82" width="70" height="40" fill="rgba(52,211,153,.06)" stroke="rgba(52,211,153,.25)" stroke-width="1.5"/>
+            <ellipse cx="130" cy="122" rx="35" ry="10" fill="rgba(52,211,153,.1)" stroke="rgba(52,211,153,.28)" stroke-width="1.5"/>
+            <!-- DB label -->
+            <text x="130" y="106" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="rgba(52,211,153,.7)">USDA</text>
+            <text x="130" y="116" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="rgba(52,211,153,.5)">45,000+ foods</text>
+            <!-- Arrow to AI box -->
+            <line x1="165" y1="102" x2="220" y2="102" stroke="rgba(52,211,153,.5)" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#arr)"/>
+            <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(52,211,153,.5)"/></marker></defs>
+            <!-- AI / LLM box -->
+            <rect x="222" y="82" width="76" height="40" rx="6" fill="rgba(52,211,153,.08)" stroke="rgba(52,211,153,.4)" stroke-width="1.5"/>
+            <text x="260" y="99" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="rgba(52,211,153,.8)">Groq</text>
+            <text x="260" y="110" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="rgba(52,211,153,.6)">LLaMA AI</text>
+            <text x="260" y="120" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="rgba(52,211,153,.4)">RAG</text>
+            <!-- Food items floating -->
+            <circle cx="80" cy="155" r="14" fill="rgba(52,211,153,.08)" stroke="rgba(52,211,153,.3)" stroke-width="1"/>
+            <text x="80" y="159" text-anchor="middle" font-size="14">🍌</text>
+            <circle cx="130" cy="165" r="14" fill="rgba(52,211,153,.08)" stroke="rgba(52,211,153,.3)" stroke-width="1"/>
+            <text x="130" y="169" text-anchor="middle" font-size="14">🍗</text>
+            <circle cx="180" cy="155" r="14" fill="rgba(52,211,153,.08)" stroke="rgba(52,211,153,.3)" stroke-width="1"/>
+            <text x="180" y="159" text-anchor="middle" font-size="13">🫙</text>
+            <circle cx="230" cy="160" r="14" fill="rgba(52,211,153,.08)" stroke="rgba(52,211,153,.3)" stroke-width="1"/>
+            <text x="230" y="164" text-anchor="middle" font-size="13">🍛</text>
+            <circle cx="280" cy="152" r="14" fill="rgba(52,211,153,.08)" stroke="rgba(52,211,153,.3)" stroke-width="1"/>
+            <text x="280" y="156" text-anchor="middle" font-size="13">🥗</text>
+            <!-- Label -->
+            <text x="200" y="205" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="rgba(52,211,153,.5)" letter-spacing="2">FOOD CALORIE ANALYZER</text>
+            <text x="200" y="218" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="rgba(52,211,153,.3)">RAG · Groq LLaMA · USDA Database</text>
+          </svg>
+          <span class="proj-tag-badge font-mono">Project 2 of 5</span>
+          <span class="proj-live font-mono">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            Try Live
+          </span>
+        </a>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-year font-mono">2026</span><span class="proj-domain font-mono">· Healthcare · RAG</span></div>
+          <h3 class="proj-name">Food Calorie Analyzer (RAG)</h3>
+          <p class="proj-tagline font-mono">Type any food, get instant AI-powered nutrition advice.</p>
+          <p class="proj-desc">RAG-based calorie and nutrition analyzer built on the USDA 45,000+ food database, powered by Groq LLaMA. Tested across Indian and global foods — sambar, banana, chicken and more.</p>
+          <ul class="proj-highlights">
+            <li><span></span>45,000+ food database coverage</li>
+            <li><span></span>RAG retrieval for grounded answers</li>
+            <li><span></span>Deployed on Render</li>
+            <li><span></span>Tested on Indian cuisine</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="proj-tech font-mono">Python</span>
+            <span class="proj-tech font-mono">Flask</span>
+            <span class="proj-tech font-mono">Groq LLaMA</span>
+            <span class="proj-tech font-mono">USDA API</span>
+            <span class="proj-tech font-mono">RAG</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://food-calorie-analyzer-fki8.onrender.com/" target="_blank" rel="noopener noreferrer" class="proj-btn-live font-mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              Try it live
+            </a>
+            <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noopener noreferrer" class="proj-btn-gh font-mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              Source
+            </a>
+            <span class="proj-arrow" style="margin-left:auto">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 — Bus Tracking -->
+      <article class="proj-card">
+        <div style="padding:1.5rem 1.5rem 0;display:flex;align-items:center;justify-content:space-between">
+          <div class="proj-small-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(52,211,153,.8);border:1px solid rgba(52,211,153,.2);border-radius:.25rem;padding:.2rem .5rem">Academic</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-year font-mono">2024</span><span class="proj-domain font-mono">· Mobility</span></div>
+          <h3 class="proj-name">Bus Tracking System (QR-Based)</h3>
+          <p class="proj-tagline font-mono">QR-based bus tracking with integrated digital payments.</p>
+          <p class="proj-desc">A QR code-based bus tracking system with integrated digital payment functionality, designed to improve public transport efficiency and rider experience.</p>
+          <ul class="proj-highlights">
+            <li><span></span>QR-driven boarding flow</li>
+            <li><span></span>Integrated digital payments</li>
+            <li><span></span>Real-time location updates</li>
+            <li><span></span>Android companion app</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="proj-tech font-mono">Android</span>
+            <span class="proj-tech font-mono">Python</span>
+            <span class="proj-tech font-mono">Flask</span>
+            <span class="proj-tech font-mono">Java</span>
+            <span class="proj-tech font-mono">MySQL</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noopener noreferrer" class="proj-btn-gh font-mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              Source
+            </a>
+            <span class="proj-arrow" style="margin-left:auto">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 — Currency Converter -->
+      <article class="proj-card">
+        <div style="padding:1.5rem 1.5rem 0;display:flex;align-items:center;justify-content:space-between">
+          <div class="proj-small-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(52,211,153,.8);border:1px solid rgba(52,211,153,.2);border-radius:.25rem;padding:.2rem .5rem">Backend</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-year font-mono">2024</span><span class="proj-domain font-mono">· Backend</span></div>
+          <h3 class="proj-name">Currency Converter API</h3>
+          <p class="proj-tagline font-mono">Spring Boot REST service for real-time currency conversion.</p>
+          <p class="proj-desc">A Spring Boot application with RESTful endpoints for real-time currency conversion, complete with error handling, JSON responses and JUnit unit tests.</p>
+          <ul class="proj-highlights">
+            <li><span></span>Real-time FX conversion</li>
+            <li><span></span>REST endpoints + JSON</li>
+            <li><span></span>Error handling &amp; validation</li>
+            <li><span></span>JUnit test coverage</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="proj-tech font-mono">Java</span>
+            <span class="proj-tech font-mono">Spring Boot</span>
+            <span class="proj-tech font-mono">REST API</span>
+            <span class="proj-tech font-mono">JSON</span>
+            <span class="proj-tech font-mono">JUnit</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noopener noreferrer" class="proj-btn-gh font-mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              Source
+            </a>
+            <span class="proj-arrow" style="margin-left:auto">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2><span class="section-num font-mono">04.</span>Skills &amp; Tools</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-head"><h3 class="skill-group-title">Product</h3><span class="skill-count font-mono">9 items</span></div>
+        <div class="skill-pills">
+          <span class="skill-pill">Backlog Management</span>
+          <span class="skill-pill">Release Planning</span>
+          <span class="skill-pill">User Stories</span>
+          <span class="skill-pill">Acceptance Criteria</span>
+          <span class="skill-pill">Sprint Prioritisation</span>
+          <span class="skill-pill">Stakeholder Management</span>
+          <span class="skill-pill">QA &amp; Bug Triage</span>
+          <span class="skill-pill">Play Console</span>
+          <span class="skill-pill">App Store Connect</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-head"><h3 class="skill-group-title">Engineering</h3><span class="skill-count font-mono">9 items</span></div>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Django</span>
+          <span class="skill-pill">Flask</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">HTML / CSS</span>
+          <span class="skill-pill">Bootstrap</span>
+          <span class="skill-pill">Spring Boot</span>
+          <span class="skill-pill">REST API</span>
+          <span class="skill-pill">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-head"><h3 class="skill-group-title">AI &amp; Data</h3><span class="skill-count font-mono">6 items</span></div>
+        <div class="skill-pills">
+          <span class="skill-pill">Prompt Engineering</span>
+          <span class="skill-pill">RAG</span>
+          <span class="skill-pill">Google Gemini</span>
+          <span class="skill-pill">Groq LLaMA</span>
+          <span class="skill-pill">Data Analytics</span>
+          <span class="skill-pill">Excel Trackers</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-head"><h3 class="skill-group-title">Enterprise</h3><span class="skill-count font-mono">5 items</span></div>
+        <div class="skill-pills">
+          <span class="skill-pill">SAP ERP</span>
+          <span class="skill-pill">SAP VIM</span>
+          <span class="skill-pill">PO / SES</span>
+          <span class="skill-pill">AR / AP</span>
+          <span class="skill-pill">Exception Invoice Check</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2><span class="section-num font-mono">05.</span>Education &amp; Certifications</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="edu-certs-grid">
+      <div>
+        <div class="edu-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+          Education
+        </div>
+        <div class="edu-cards">
+          <div class="edu-card">
+            <div class="edu-card-head">
+              <p class="edu-degree">MBA — Business Analytics</p>
+              <span class="edu-status font-mono">Pursuing</span>
+            </div>
+            <p class="edu-school">Amity University (Online)</p>
+            <p class="edu-period font-mono">2026 — 2028</p>
+          </div>
+          <div class="edu-card">
+            <div class="edu-card-head">
+              <p class="edu-degree">BSc Computer Science</p>
+              <span class="edu-status font-mono">First Class</span>
+            </div>
+            <p class="edu-school">University of Calicut · Yuvakshetra Institute, Palakkad</p>
+            <p class="edu-period font-mono">2021 — 2024</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="edu-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+          Certifications
+        </div>
+        <div class="cert-cards">
+          <div class="cert-card"><p class="cert-name">AI Prompt Engineering</p><p class="cert-org">Dubai Future Foundation</p><p class="cert-year font-mono">May 2025</p></div>
+          <div class="cert-card"><p class="cert-name">Certified CCSA Cyber Security Analyst</p><p class="cert-org">CCSA</p><p class="cert-year font-mono">—</p></div>
+          <div class="cert-card"><p class="cert-name">Data Analytics (MS-DA002)</p><p class="cert-org">Cognizant Foundation</p><p class="cert-year font-mono">Grade B</p></div>
+          <div class="cert-card"><p class="cert-name">Machine Learning Onramp</p><p class="cert-org">MathWorks</p><p class="cert-year font-mono">—</p></div>
+          <div class="cert-card"><p class="cert-name">Deep Learning Onramp</p><p class="cert-org">MathWorks</p><p class="cert-year font-mono">—</p></div>
+          <div class="cert-card"><p class="cert-name">Interview Skills Assessment</p><p class="cert-org">TCS iON</p><p class="cert-year font-mono">Jan 2026</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2><span class="section-num font-mono">06.</span>Get in Touch</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-sub">Actively exploring Project Coordinator, Associate Product Manager, and Business Analyst roles — especially in healthcare tech. Happy to chat about product, AI side-projects, or just coffee.</p>
+        <div class="contact-links">
+          <a href="mailto:zaiyanazulfikar@gmail.com" class="contact-link">
+            <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+            zaiyanazulfikar@gmail.com
+          </a>
+          <a href="tel:+919746676155" class="contact-link">
+            <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            +91 97466 76155
+          </a>
+          <div class="contact-link">
+            <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+            Palakkad, Kerala, India
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noreferrer" class="social-btn" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/zaiyana-aliya-p-z-612004273" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn" onclick="window.open('https://www.linkedin.com/in/zaiyana-aliya-p-z-612004273','_blank');return false;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label font-mono">Name</label><input class="form-input" placeholder="Your name" type="text"></div>
+          <div class="form-group"><label class="form-label font-mono">Email</label><input class="form-input" placeholder="you@company.com" type="email"></div>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem"><label class="form-label font-mono">Message</label><textarea class="form-input" rows="6" placeholder="What's on your mind?"></textarea></div>
+        <button class="form-submit font-mono" onclick="this.closest('form')&&this.closest('form').submit();window.location.href='mailto:zaiyanazulfikar@gmail.com'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy font-mono">Designed &amp; built by <span>Zaiyana Aliya P Z</span>. &copy; 2026</p>
+    <div class="footer-links">
+      <a href="https://github.com/zaiyana-aliya" target="_blank" rel="noreferrer" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+      <a href="https://www.linkedin.com/in/zaiyana-aliya-p-z-612004273" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="mailto:zaiyanazulfikar@gmail.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+      <a href="#top" class="back-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function switchTab(idx) {
+  document.querySelectorAll('.exp-tab-btn').forEach((b,i)=>{b.classList.toggle('active',i===idx)});
+  document.querySelectorAll('.exp-content').forEach((c,i)=>{c.classList.toggle('active',i===idx)});
+}
+</script>
+</body>
+</html>
